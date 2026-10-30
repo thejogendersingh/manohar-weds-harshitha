@@ -119,3 +119,26 @@ body {
 .text-foreground\/90 {
   color: #2D080C !important;
 }
+
+
+/* Kannada Royal Typography Overrides */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Kannada:wght@400;500;600;700&family=Noto+Serif+Kannada:wght@400;500;600;700&display=swap');
+
+.font-kannada {
+  font-family: 'Noto Serif Kannada', 'Noto Sans Kannada', Georgia, serif !important;
+  line-height: 1.8 !important;
+  letter-spacing: 0.01em !important;
+}
+
+.font-kannada-sans {
+  font-family: 'Noto Sans Kannada', 'Montserrat', sans-serif !important;
+  line-height: 1.75 !important;
+}
+
+.font-royal-body {
+  font-family: 'Montserrat', 'Noto Serif Kannada', 'Noto Sans Kannada', sans-serif !important;
+}
+
+.font-royal-title {
+  font-family: 'Playfair Display', 'Noto Serif Kannada', Georgia, serif !important;
+}

@@ -1,7 +1,7 @@
 {
-  "name": "amit-weds-urvashi-wedding-invitation",
+  "name": "harshitha-weds-manohar-wedding-invitation",
   "version": "1.0.0",
-  "description": "Amit & Urvashi Wedding Invitation",
+  "description": "Harshitha & Manohar Wedding Invitation",
   "scripts": {
     "start": "python server.py",
     "dev": "python server.py",
@@ -10,9 +10,9 @@
   "keywords": [
     "wedding",
     "invitation",
-    "amit",
-    "urvashi",
-    "nigam"
+    "harshitha",
+    "manohar",
+    "kannada"
   ],
   "author": "",
   "license": "ISC"
