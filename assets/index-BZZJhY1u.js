@@ -86,6 +86,56 @@ q=({onOpen:t,opening:s})=>e.jsxs("div",{className:"min-h-screen w-full flex flex
 ]});
 const S="/img/g-welcome-bg-BCda9f2G.png",K="/img/g-shiva-parvati-D5GA8Xot.png",ee="/img/reception-couple.png",te="/img/04-CC6lrDGi.png",k="/img/wedding-hero-BBfn2Y6k.jpg",re="/img/g-haldi-bg-CB-4YaJG.png",ce="/img/g-wedding-bg-8_wipKLl.png",fe="/img/family.png";
 
+const GALLERY_ITEMS=[
+  {
+    src:"/img/WhatsApp%20Image%202026-10-30%20at%208.57.31%20PM.jpeg",
+    tag:"DIVINE BLESSINGS • ದೈವಿಕ ಆಶೀರ್ವಾದ",
+    titleEn:"Lord Shiva & Goddess Parvati",
+    titleKn:"ಶ್ರೀ ಶಿವ-ಪಾರ್ವತಿಯರ ದೈವಿಕ ಆಶೀರ್ವಾದ"
+  },
+  {
+    src:"/img/WhatsApp%20Image%202026-10-30%20at%208.56.21%20PM.jpeg",
+    tag:"SACRED UNION • ಪವಿತ್ರ ಬಂಧನ",
+    titleEn:"Sacred Bond Blessed by Mahadev & Parvati",
+    titleKn:"ಪವಿತ್ರ ಬಂಧನಕ್ಕೆ ಆದಿ ದಂಪತಿಗಳ ಕೃಪೆ"
+  },
+  {
+    src:"/img/WhatsApp%20Image%202026-10-29%20at%208.32.03%20PM.jpeg",
+    tag:"ROYAL MONOGRAM • ಶುಭ ಲಾಂಛನ",
+    titleEn:"Manohar & Harshitha — Couple Monogram",
+    titleKn:"ಮನೋಹರ್ ಮತ್ತು ಹರ್ಷಿತಾ — ಶುಭ ವಿವಾಹ ಲಾಂಛನ"
+  }
+];
+
+function pe(){
+  const[t,s]=n.useState(0),a=n.useRef(null);
+  n.useEffect(()=>{
+    const c=setInterval(()=>s(l=>(l+1)%GALLERY_ITEMS.length),3200);
+    return()=>clearInterval(c);
+  },[]);
+  const i=()=>s(c=>(c-1+GALLERY_ITEMS.length)%GALLERY_ITEMS.length),
+  m=()=>s(c=>(c+1)%GALLERY_ITEMS.length);
+  return e.jsxs("div",{className:"w-full flex flex-col items-center",children:[
+    e.jsx("div",{className:"gallery-card-frame",onTouchStart:c=>{a.current=c.touches[0]?.clientX??null},onTouchEnd:c=>{if(a.current===null)return;const l=(c.changedTouches[0]?.clientX??a.current)-a.current;Math.abs(l)>40&&(l>0?i():m());a.current=null},children:
+      e.jsxs("div",{className:"gallery-viewport",children:[
+        GALLERY_ITEMS.map((c,l)=>e.jsxs("div",{className:`gallery-slide ${l===t?"is-active":""}`,"aria-hidden":l!==t,children:[
+          e.jsx("img",{src:c.src,alt:"",className:"gallery-slide-bg"}),
+          e.jsx("img",{src:c.src,alt:c.titleEn,className:"gallery-slide-img"}),
+          e.jsxs("div",{className:"gallery-caption-bar",children:[
+            e.jsx("p",{className:"font-royal-sub text-[11px] tracking-[0.18em] text-amber-200 font-bold",style:{color:"#FDE68A"},children:c.tag}),
+            e.jsx("h3",{className:"font-royal-title text-base sm:text-lg font-bold text-white mt-0.5",style:{color:"#FFF8EE"},children:c.titleEn}),
+            e.jsx("p",{className:"font-kannada text-xs sm:text-sm font-semibold text-amber-100 mt-0.5",style:{color:"#FEF3C7"},children:c.titleKn})
+          ]})
+        ]},c.src)),
+        e.jsx("button",{type:"button",onClick:i,"aria-label":"Previous slide",className:"gallery-nav-btn gallery-nav-prev",children:"❮"}),
+        e.jsx("button",{type:"button",onClick:m,"aria-label":"Next slide",className:"gallery-nav-btn gallery-nav-next",children:"❯"})
+      ]})
+    }),
+    e.jsx("div",{className:"gallery-dots",children:GALLERY_ITEMS.map((c,l)=>e.jsx("button",{type:"button",onClick:()=>s(l),"aria-label":`Show slide ${l+1}`,className:`gallery-dot ${l===t?"is-active":""}`},l))}),
+    e.jsx("div",{className:"gallery-thumbs",children:GALLERY_ITEMS.map((c,l)=>e.jsx("button",{type:"button",onClick:()=>s(l),"aria-label":c.titleEn,className:`gallery-thumb ${l===t?"is-active":""}`,children:e.jsx("img",{src:c.src,alt:c.titleEn})},l))})
+  ]});
+}
+
 const de=()=>{
   const[t,s]=n.useState(!1),[a,i]=n.useState({}),m=n.useRef(null),o=n.useRef(null);
   return n.useEffect(()=>{
@@ -199,7 +249,19 @@ const de=()=>{
       ]})
     ]}),
 
-    // 3. SAVE THE DATE
+    // 3. SACRED BLESSINGS & COUPLE MONOGRAM AUTO-SLIDING GALLERY SECTION
+    e.jsxs("section",{className:"relative py-20 px-4 sm:px-6 bg-[#FCF8F2] border-t border-gold-soft/30 z-10 overflow-hidden",children:[
+      e.jsx("img",{src:S,alt:"",className:"absolute inset-0 w-full h-full object-cover opacity-20 pointer-events-none"}),
+      e.jsxs("div",{className:"relative max-w-3xl mx-auto text-center z-10 flex flex-col items-center",children:[
+        e.jsx("p",{className:"font-royal-sub text-xs tracking-[0.22em] text-amber-800 uppercase font-bold",children:"DIVINE GRACE & ROYAL CREST • ದೈವಿಕ ಕೃಪೆ ಮತ್ತು ಲಾಂಛನ"}),
+        e.jsx("h2",{className:"font-royal-title text-2xl sm:text-4xl text-rose-deep font-bold mt-1",children:"Sacred Blessings & Couple Gallery"}),
+        e.jsx("p",{className:"font-kannada text-base sm:text-lg text-[#5C0F14] font-bold mt-1",children:"ಶಿವ-ಪಾರ್ವತಿಯರ ಆಶೀರ್ವಾದ ಮತ್ತು ಶುಭ ವಿವಾಹ ಲಾಂಛನ"}),
+        e.jsx(y,{}),
+        e.jsx(pe,{})
+      ]})
+    ]}),
+
+    // 4. SAVE THE DATE
     e.jsxs("section",{className:"relative py-20 px-6 bg-cream border-y border-gold-soft/30 z-10",children:[
       e.jsx("img",{src:k,alt:"",className:"absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none"}),
       e.jsxs("div",{className:"relative max-w-3xl mx-auto text-center z-10",children:[
@@ -212,7 +274,7 @@ const de=()=>{
       ]})
     ]}),
 
-    // 4. EVENTS SCHEDULE (3 Events: Haldi, Reception, Wedding — First English, Then Kannada)
+    // 5. EVENTS SCHEDULE (3 Events: Haldi, Reception, Wedding — First English, Then Kannada)
     e.jsx("section",{className:"relative py-20 px-4 sm:px-6 bg-[#FCF8F2] z-10",children:
       e.jsxs("div",{className:"max-w-4xl mx-auto",children:[
         e.jsxs("div",{className:"text-center mb-16",children:[
@@ -228,7 +290,7 @@ const de=()=>{
             e.jsx("img",{src:re,alt:"",className:"absolute inset-0 w-full h-full object-cover z-0 pointer-events-none scale-[1.06] origin-center"}),
             e.jsx("div",{className:"absolute inset-0 pointer-events-none overflow-hidden mix-blend-color-burn z-10",children:Array.from({length:15}).map((c,l)=>e.jsx("div",{className:"absolute w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-400 opacity-60 animate-turmeric",style:{left:`${l*37%100}%`,top:`${10+l*23%80}%`,animationDelay:`${l*7%30/10}s`,animationDuration:`${2.5+l*11%30/10}s`}},l))}),
             e.jsxs("div",{className:"relative top-4 z-10 text-center flex flex-col items-center w-full mx-auto bg-white/75 backdrop-blur-md border border-white/60 p-5 sm:p-6 rounded-3xl shadow-elegant mt-12 sm:mt-16",children:[
-              e.jsx("img",{src:v,alt:"HM Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
+              e.jsx("img",{src:v,alt:"MH Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
               e.jsx("p",{className:"font-royal-body italic text-amber-800 text-sm font-semibold tracking-wide",children:"#HaldiCeremony"}),
               e.jsx("h2",{className:"font-royal-title text-2xl sm:text-3xl tracking-wide font-bold text-amber-900 leading-tight mt-1",children:"💛 HALDI CEREMONY 💛"}),
               e.jsx("p",{className:"font-kannada text-lg sm:text-xl font-bold text-amber-900 mt-1",children:"💛 ಅರಿಶಿನ ಶಾಸ್ತ್ರ ಸಮಾರಂಭ 💛"}),
@@ -254,7 +316,7 @@ const de=()=>{
             e.jsx("img",{src:"/img/reception-bg.png",alt:"",className:"absolute inset-0 w-full h-full object-cover z-0 pointer-events-none scale-[1.06] origin-center filter brightness-95"}),
             e.jsx("div",{className:"absolute inset-0 pointer-events-none overflow-hidden z-10",children:Array.from({length:6}).map((c,l)=>e.jsx("div",{className:"absolute animate-float-petal opacity-75",style:{left:`${15+l*27%75}%`,animationDuration:`${10+l*4%7}s`,animationDelay:`${l*5%4}s`},children:e.jsx("span",{className:"text-xl sm:text-2xl opacity-70",children:"✨"})},l))}),
             e.jsxs("div",{className:"relative z-10 text-center flex flex-col items-center w-full mx-auto bg-white/75 backdrop-blur-md border border-white/60 p-5 sm:p-6 rounded-3xl shadow-elegant mt-12 sm:mt-16",children:[
-              e.jsx("img",{src:v,alt:"HM Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
+              e.jsx("img",{src:v,alt:"MH Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
               e.jsx("p",{className:"font-royal-body italic text-[#5C0F14] text-sm font-semibold tracking-wide",style:{color:"#5C0F14"},children:"#WeddingReception"}),
               e.jsx("h2",{className:"font-royal-title text-2xl sm:text-3xl tracking-wide font-bold text-[#5C0F14] leading-tight mt-1",style:{color:"#5C0F14"},children:"💐 WEDDING RECEPTION 💐"}),
               e.jsx("p",{className:"font-kannada text-lg sm:text-xl font-bold text-[#5C0F14] mt-1",children:"💐 ವಿವಾಹ ಆರತಕ್ಷತೆ 💐"}),
@@ -280,7 +342,7 @@ const de=()=>{
             e.jsx("img",{src:ce,alt:"",className:"absolute inset-0 w-full h-full object-cover z-0 pointer-events-none scale-[1.06] origin-center"}),
             e.jsx("div",{className:"absolute inset-0 pointer-events-none overflow-hidden z-10",children:Array.from({length:6}).map((c,l)=>e.jsx("div",{className:"absolute animate-float-petal opacity-75",style:{left:`${10+l*29%80}%`,animationDuration:`${12+l*3%8}s`,animationDelay:`${l*7%5}s`},children:e.jsx("span",{className:"text-xl sm:text-2xl opacity-70",children:"🌸"})},l))}),
             e.jsxs("div",{className:"relative z-10 text-center flex flex-col items-center w-full mx-auto bg-white/75 backdrop-blur-md border border-white/60 p-5 sm:p-6 rounded-3xl shadow-elegant mt-12 sm:mt-16",children:[
-              e.jsx("img",{src:v,alt:"HM Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
+              e.jsx("img",{src:v,alt:"MH Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
               e.jsx("p",{className:"font-royal-body italic text-[#5C0F14] text-sm font-semibold tracking-wide",style:{color:"#5C0F14"},children:"#WeddingCeremony"}),
               e.jsx("h2",{className:"font-royal-title text-2xl sm:text-3xl tracking-wide font-bold text-[#5C0F14] leading-tight mt-1",style:{color:"#5C0F14"},children:"🙏 WEDDING CEREMONY 🙏"}),
               e.jsx("p",{className:"font-kannada text-lg sm:text-xl font-bold text-[#5C0F14] mt-1",children:"🙏 ಶುಭ ವಿವಾಹ ಮಹೋತ್ಸವ 🙏"}),
@@ -307,7 +369,7 @@ const de=()=>{
       ]})
     }),
 
-    // 5. WISHES & POETIC QUOTE SECTION (First English, Then Kannada)
+    // 6. WISHES & POETIC QUOTE SECTION (First English, Then Kannada)
     e.jsxs("section",{className:"relative py-20 px-4 sm:px-6 bg-cream text-center z-10 border-t border-gold-soft/30",children:[
       e.jsx("img",{src:k,alt:"",className:"absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"}),
       e.jsxs("div",{className:"relative max-w-2xl mx-auto z-10",children:[
@@ -339,7 +401,7 @@ const de=()=>{
       ]})
     ]}),
 
-    // 6. VENUES & MAPS (First English, Then Kannada)
+    // 7. VENUES & MAPS (First English, Then Kannada)
     e.jsxs("section",{className:"relative py-20 px-6 bg-[#FAF6F0] z-10 border-t border-gold-soft/30",children:[
       e.jsx("div",{className:"absolute inset-0 opacity-[0.08] bg-cover bg-center pointer-events-none",style:{backgroundImage:`url(${k})`}}),
       e.jsxs("div",{className:"relative max-w-4xl mx-auto text-center z-10 space-y-16",children:[
@@ -385,7 +447,7 @@ const de=()=>{
       ]})
     ]}),
 
-    // 7. FOOTER
+    // 8. FOOTER
     e.jsxs("footer",{className:"relative bg-gradient-to-b from-[#3A050B] to-[#5C0F14] text-cream py-16 px-6 text-center z-10 border-t-2 border-gold-soft/40",children:[
       e.jsx("div",{className:"absolute inset-0 bg-black/10 pointer-events-none"}),
       e.jsx("p",{className:"font-royal-sub text-xs tracking-[0.3em] text-amber-200 font-semibold",style:{color:"#FDE68A"},children:"WITH LOVE"}),
