@@ -54,9 +54,9 @@ function _({revealed:t,onRevealed:s}){
   return e.jsxs("div",{className:"scratch-wrapper",children:[
     e.jsxs("div",{ref:i,className:"scratch-card",children:[
       e.jsxs("div",{className:"scratch-date",children:[
-        e.jsx("p",{className:"font-cinzel text-xs tracking-[0.25em] text-[#5C0F14]/80 uppercase",children:"WEDNESDAY"}),
+        e.jsx("p",{className:"font-cinzel text-xs tracking-[0.25em] text-[#5C0F14]/80 uppercase",children:"WEDNESDAY • ಬುಧವಾರ"}),
         e.jsx("strong",{className:"font-cinzel text-xl sm:text-2xl text-rose font-bold tracking-wider mt-1",children:"11-11-2026"}),
-        e.jsx("span",{className:"font-kannada text-xs text-foreground/80 mt-1 font-medium",children:"ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ"})
+        e.jsx("span",{className:"font-kannada text-xs text-foreground/80 mt-1 font-medium",children:"Kengal, Channapatna • ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ"})
       ]}),
       !t&&e.jsx("canvas",{ref:a,role:"button",tabIndex:0,"aria-label":"Scratch to reveal the wedding date, or press Enter",onKeyDown:r=>{(r.key==="Enter"||r.key===" ")&&(r.preventDefault(),b())},onPointerDown:r=>{r.currentTarget.setPointerCapture(r.pointerId),m.current=!0,p(r)},onPointerMove:p,onPointerUp:z,onPointerCancel:z})
     ]}),
@@ -74,16 +74,17 @@ q=({onOpen:t,opening:s})=>e.jsxs("div",{className:"min-h-screen w-full flex flex
     e.jsx("div",{className:`mb-6 transition-all duration-500 ${s?"opacity-0 scale-95":"animate-fade-up"}`,children:e.jsx("img",{src:A,alt:"Lord Ganesha",className:"w-20 h-20 sm:w-24 sm:h-24 object-contain mx-auto drop-shadow-md animate-shimmer"})}),
     e.jsxs("button",{onClick:t,"aria-label":"Open invitation",className:`relative group transition-transform duration-500 hover:scale-105 active:scale-95 ${s?"animate-envelope-open":"animate-fade-up delay-100"}`,style:{perspective:"1000px"},children:[
       e.jsx("img",{src:Y,alt:"Wedding invitation envelope",className:"w-[280px] sm:w-[340px] md:w-[380px] h-auto drop-shadow-2xl"}),
-      e.jsx("span",{className:"absolute inset-0 flex items-center justify-center",children:e.jsx("img",{src:v,alt:"Harshitha & Manohar wax seal monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover drop-shadow-lg group-hover:rotate-12 transition-transform duration-500"})})
+      e.jsx("span",{className:"absolute inset-0 flex items-center justify-center",children:e.jsx("img",{src:v,alt:"Manohar & Harshitha wax seal monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover drop-shadow-lg group-hover:rotate-12 transition-transform duration-500"})})
     ]}),
     e.jsxs("div",{className:`mt-8 text-center transition-all duration-500 ${s?"opacity-0 translate-y-4 pointer-events-none":"animate-fade-up delay-200"}`,children:[
       e.jsx("h1",{className:"font-royal-sub text-xl sm:text-2xl text-rose-deep font-bold tracking-[0.22em]",children:"YOU'RE INVITED"}),
-      e.jsxs("p",{className:"mt-2 text-rose font-royal-script text-5xl sm:text-6xl font-normal",children:[e.jsx("span",{className:"font-royal-capital-a",children:"H"}),"arshitha & Manohar"]}),
+      e.jsxs("p",{className:"mt-2 text-rose font-royal-script text-5xl sm:text-6xl font-normal",children:[e.jsx("span",{className:"font-royal-capital-a",children:"M"}),"anohar & Harshitha"]}),
+      e.jsx("p",{className:"mt-1 font-kannada text-rose-deep/90 text-base sm:text-lg font-semibold",children:"ಮನೋಹರ್ & ಹರ್ಷಿತಾ"}),
       e.jsx("p",{className:"mt-3 font-royal-body text-foreground/85 tracking-wide text-xs sm:text-sm font-medium",children:"Tap the envelope to open our invitation"})
     ]})
   ]})
 ]});
-const S="/img/g-welcome-bg-BCda9f2G.png",K="/img/g-shiva-parvati-D5GA8Xot.png",ee="/img/reception-couple.png",te="/img/04-CC6lrDGi.png",k="/img/wedding-hero-BBfn2Y6k.jpg",ce="/img/g-wedding-bg-8_wipKLl.png";
+const S="/img/g-welcome-bg-BCda9f2G.png",K="/img/g-shiva-parvati-D5GA8Xot.png",ee="/img/reception-couple.png",te="/img/04-CC6lrDGi.png",k="/img/wedding-hero-BBfn2Y6k.jpg",re="/img/g-haldi-bg-CB-4YaJG.png",ce="/img/g-wedding-bg-8_wipKLl.png",fe="/img/family.png";
 
 const de=()=>{
   const[t,s]=n.useState(!1),[a,i]=n.useState({}),m=n.useRef(null),o=n.useRef(null);
@@ -94,7 +95,7 @@ const de=()=>{
   e.jsxs("main",{className:"relative bg-[#FCF8F2] min-h-screen text-rose-deep overflow-hidden select-none animate-fade-in",children:[
     e.jsx("div",{className:"fixed inset-0 pointer-events-none opacity-[0.08] z-0 mix-blend-overlay",children:e.jsx("img",{src:S,alt:"",className:"w-full h-full object-cover"})}),
 
-    // 1. HERO SECTION — English Headings & Couple Names, Kannada Data (No Double Headings)
+    // 1. HERO SECTION — Every text first in English, then in Kannada
     e.jsxs("section",{ref:m,"data-id":"welcome",className:"relative min-h-screen w-full flex flex-col items-center justify-between py-12 px-6 bg-cover bg-center overflow-hidden z-10",style:{backgroundImage:`url(${S})`},children:[
       e.jsx("div",{className:"absolute inset-0 bg-[#FCF8F2]/10 pointer-events-none"}),
       e.jsxs("div",{className:"absolute top-0 left-0 right-0 z-20 flex justify-between px-4 sm:px-12 pointer-events-none",children:[
@@ -108,35 +109,45 @@ const de=()=>{
         ]})
       ]}),
       e.jsxs("div",{className:"relative z-10 w-full max-w-2xl mx-auto flex flex-col items-center text-center mt-12 sm:mt-16",children:[
-        // Top Deity Invocations in Kannada
+        // Top Deity Invocations: First English, Then Kannada
         e.jsxs("div",{className:"mb-5 animate-fade-up flex flex-col items-center",children:[
-          e.jsx("img",{src:A,alt:"Lord Ganesha",width:80,height:80,className:"mx-auto h-20 w-20 sm:h-24 sm:w-24 object-contain drop-shadow-md animate-shimmer"}),
-          e.jsxs("div",{className:"bg-[#FCF8F2]/95 border border-gold-soft px-6 py-2.5 rounded-2xl shadow-sm inline-flex flex-col items-center gap-1 mt-3",children:[
-            e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-[#5C0F14] font-bold tracking-wide",children:"🙏 ಶ್ರೀ ಕಾಲಭೈರವೇಶ್ವರಸ್ವಾಮಿ ಪ್ರಸನ್ನ"}),
-            e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-[#5C0F14] font-bold tracking-wide",children:"।। ॥ ಶ್ರೀ ಹೊನ್ನಾರುತಮ್ಮ ಕೃಪೆ |🙏"})
+          e.jsx("img",{src:A,alt:"Lord Ganesha",width:80,height:80,className:"mx-auto h-20 w-20 sm:h-24 sm:h-24 object-contain drop-shadow-md animate-shimmer"}),
+          e.jsxs("div",{className:"bg-[#FCF8F2]/95 border border-gold-soft px-6 py-3 rounded-2xl shadow-sm inline-flex flex-col items-center gap-1 mt-3",children:[
+            e.jsx("p",{className:"font-royal-sub text-xs sm:text-sm tracking-[0.12em] text-[#5C0F14] font-bold",children:"|| Shree Male Mahadeshwara Krupe ||"}),
+            e.jsx("p",{className:"font-royal-sub text-xs sm:text-sm tracking-[0.12em] text-[#5C0F14] font-bold",children:"|| Shree Umathooru Urkateshwari Krupe ||"}),
+            e.jsx("div",{className:"w-16 h-px bg-gold-soft/70 my-1"}),
+            e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-[#5C0F14] font-bold tracking-wide",children:"🙏 ॥ ಶ್ರೀ ಮಲೆ ಮಹದೇಶ್ವರ ಕೃಪೆ ॥ 🙏"}),
+            e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-[#5C0F14] font-bold tracking-wide",children:"🙏 ॥ ಶ್ರೀ ಉಮ್ಮತ್ತೂರು ಊರುಕಾಟೇಶ್ವರಿ ಕೃಪೆ ॥ 🙏"})
           ]})
         ]}),
 
-        // Main Invitation Card: Heading in English, Data in Kannada
+        // Main Invitation Card: First English, Then Kannada
         e.jsxs("div",{className:"max-w-lg mx-auto bg-[#FCF8F2]/95 border-2 border-gold-soft p-6 rounded-2xl mb-6 shadow-elegant animate-fade-up delay-200 backdrop-blur-sm",children:[
           e.jsx("h2",{className:"font-royal-title text-lg sm:text-xl text-[#5C0F14] font-bold tracking-[0.14em] uppercase",children:"💐 WEDDING INVITATION 💐"}),
+          e.jsx("p",{className:"font-kannada text-base sm:text-lg text-[#5C0F14] font-bold mt-1",children:"💐 ಶುಭ ವಿವಾಹ ಆಮಂತ್ರಣ ಪತ್ರಿಕೆ 💐"}),
           e.jsx("div",{className:"w-20 h-px bg-gold-soft mx-auto my-3"}),
+          e.jsx("p",{className:"font-royal-body text-sm sm:text-base text-foreground/90 font-medium leading-relaxed",children:
+            "We warmly welcome you to join us on this auspicious occasion and bless the couple as they embark on their journey of togetherness."
+          }),
+          e.jsx("div",{className:"w-14 h-px bg-gold-soft/60 mx-auto my-3"}),
           e.jsx("p",{className:"font-kannada text-sm sm:text-base text-rose-deep font-medium leading-relaxed",children:
             "ಹಿರಿಯರ ಆಶೀರ್ವಾದ ಹಾಗೂ ದೇವರ ಕೃಪೆಯೊಂದಿಗೆ, ನಮ್ಮ ಮನೆಯ ಶುಭ ಸಮಾರಂಭಕ್ಕೆ ಆಗಮಿಸಿ, ನವಜೋಡಿಗಳು ತಮ್ಮ ಜೀವನದ ಹೊಸ ಪಯಣವನ್ನು ಆರಂಭಿಸುವ ಈ ಮಂಗಳಕರ ಸಂದರ್ಭದಲ್ಲಿ ತಮ್ಮ ಆಶೀರ್ವಾದವನ್ನು ನೀಡಿ ಹರಸಬೇಕೆಂದು ಹೃತ್ಪೂರ್ವಕವಾಗಿ ಆಹ್ವಾನಿಸುತ್ತೇವೆ."
           })
         ]}),
 
-        // Couple Details: Headings & Couple Names in English, Parentage Data in Kannada
+        // Couple Details: Groom First, Bride Second — Each with English first, then Kannada
         e.jsxs("div",{className:"mt-4 flex flex-col items-center w-full",children:[
-          // The Bride
+          // 1. The Groom: Manohar M
           e.jsxs("div",{className:"flex flex-col items-center max-w-lg px-2",children:[
-            e.jsx("span",{className:"font-royal-sub text-xs tracking-[0.22em] text-amber-800 font-bold uppercase mb-1 animate-fade-up delay-300",children:"THE BRIDE"}),
+            e.jsx("span",{className:"font-royal-sub text-xs tracking-[0.22em] text-amber-800 font-bold uppercase mb-1 animate-fade-up delay-300",children:"THE GROOM • ವರ"}),
             e.jsx("h1",{className:"animate-fade-up delay-400",children:
-              e.jsx("span",{className:"font-royal-title text-3xl sm:text-5xl text-rose font-bold tracking-wide drop-shadow-sm hover:scale-105 transition-transform duration-500 block",children:"Chi. Sou. Harshitha M.K."})
+              e.jsx("span",{className:"font-royal-title text-3xl sm:text-5xl text-rose font-bold tracking-wide drop-shadow-sm hover:scale-105 transition-transform duration-500 block",children:"Manohar M"})
             }),
-            e.jsx("div",{className:"mt-2 text-xs sm:text-sm text-foreground/90 tracking-wide leading-relaxed animate-fade-up delay-500 text-center",children:
-              e.jsx("p",{className:"font-kannada font-semibold text-rose-deep text-sm sm:text-base",children:"ಶ್ರೀಮತಿ ಮಂಜುಳಾ ಮೂರ್ತಿ ಹಾಗೂ ಶ್ರೀ ಎಂ.ಎಸ್. ಕೇಶವಮೂರ್ತಿ ಅವರ ಸುಪುತ್ರಿ."})
-            })
+            e.jsx("p",{className:"font-kannada text-lg sm:text-xl text-[#5C0F14] font-bold mt-1 animate-fade-up delay-400",children:"ಚಿ.ರಾ. ಮನೋಹರ್ ಎಂ."}),
+            e.jsxs("div",{className:"mt-2 text-xs sm:text-sm text-foreground/90 tracking-wide leading-relaxed animate-fade-up delay-500 text-center space-y-1",children:[
+              e.jsx("p",{className:"font-royal-body font-semibold text-rose-deep text-sm sm:text-base",children:"S/o Smt. K. Sudhamani and Late Dr. S.E. Mahadevappa"}),
+              e.jsx("p",{className:"font-kannada font-semibold text-rose-deep text-sm sm:text-base",children:"ಶ್ರೀಮತಿ ಕೆ. ಸುಧಾಮಣಿ ಹಾಗೂ ದಿವಂಗತ ಡಾ. ಎಸ್.ಇ. ಮಹದೇವಪ್ಪ ಅವರ ಸುಪುತ್ರ."})
+            ]})
           ]}),
 
           // weds divider
@@ -146,15 +157,17 @@ const de=()=>{
             e.jsx("span",{className:"h-px w-14 bg-gold-soft/70"})
           ]}),
 
-          // The Groom
+          // 2. The Bride: Harshitha MK
           e.jsxs("div",{className:"flex flex-col items-center max-w-lg px-2",children:[
-            e.jsx("span",{className:"font-royal-sub text-xs tracking-[0.22em] text-amber-800 font-bold uppercase mb-1 animate-fade-up delay-500",children:"THE GROOM"}),
+            e.jsx("span",{className:"font-royal-sub text-xs tracking-[0.22em] text-amber-800 font-bold uppercase mb-1 animate-fade-up delay-500",children:"THE BRIDE • ವಧು"}),
             e.jsx("h1",{className:"animate-fade-up delay-500",children:
-              e.jsx("span",{className:"font-royal-title text-3xl sm:text-5xl text-rose font-bold tracking-wide drop-shadow-sm hover:scale-105 transition-transform duration-500 block",children:"Chi. Rau. Manohar M."})
+              e.jsx("span",{className:"font-royal-title text-3xl sm:text-5xl text-rose font-bold tracking-wide drop-shadow-sm hover:scale-105 transition-transform duration-500 block",children:"Harshitha MK"})
             }),
-            e.jsx("div",{className:"mt-2 text-xs sm:text-sm text-foreground/90 tracking-wide leading-relaxed animate-fade-up delay-700 text-center",children:
-              e.jsx("p",{className:"font-kannada font-semibold text-rose-deep text-sm sm:text-base",children:"ಶ್ರೀಮತಿ ಕೆ. ಸುಧಾಮಣಿ ಹಾಗೂ ದಿವಂಗತ ಡಾ. ಎಸ್.ಇ. ಮಹದೇವಪ್ಪ ಅವರ ಸುಪುತ್ರ."})
-            })
+            e.jsx("p",{className:"font-kannada text-lg sm:text-xl text-[#5C0F14] font-bold mt-1 animate-fade-up delay-500",children:"ಚಿ. ಸೌ. ಹರ್ಷಿತಾ ಎಂ.ಕೆ."}),
+            e.jsxs("div",{className:"mt-2 text-xs sm:text-sm text-foreground/90 tracking-wide leading-relaxed animate-fade-up delay-700 text-center space-y-1",children:[
+              e.jsx("p",{className:"font-royal-body font-semibold text-rose-deep text-sm sm:text-base",children:"D/o Smt. Manjula Murthy and Sri M.S. Keshavamurthy"}),
+              e.jsx("p",{className:"font-kannada font-semibold text-rose-deep text-sm sm:text-base",children:"ಶ್ರೀಮತಿ ಮಂಜುಳಾ ಮೂರ್ತಿ ಹಾಗೂ ಶ್ರೀ ಎಂ.ಎಸ್. ಕೇಶವಮೂರ್ತಿ ಅವರ ಸುಪುತ್ರಿ."})
+            ]})
           ]})
         ]})
       ]}),
@@ -163,69 +176,127 @@ const de=()=>{
       })
     ]}),
 
-    // 2. SAVE THE DATE
+    // 2. PARENTS' BLESSINGS SECTION (Using /img/family.png in a Royal Gold Portrait Card)
+    e.jsxs("section",{className:"relative py-20 px-6 bg-[#FAF6F0] border-t border-gold-soft/30 z-10 overflow-hidden",children:[
+      e.jsx("img",{src:k,alt:"",className:"absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"}),
+      e.jsxs("div",{className:"relative max-w-2xl mx-auto text-center z-10 flex flex-col items-center",children:[
+        e.jsx("p",{className:"font-royal-sub text-xs tracking-[0.22em] text-amber-800 uppercase font-bold",children:"PARENTS' BLESSINGS • ತಂದೆ-ತಾಯಿಯವರ ಆಶೀರ್ವಾದ"}),
+        e.jsx("h2",{className:"font-royal-title text-2xl sm:text-4xl text-rose-deep font-bold mt-1",children:"With the Eternal Blessings of Parents"}),
+        e.jsx("p",{className:"font-kannada text-base sm:text-lg text-[#5C0F14] font-bold mt-1",children:"ಪ್ರೀತಿಯ ತಂದೆ-ತಾಯಿಯವರ ಆಶೀರ್ವಾದಗಳೊಂದಿಗೆ"}),
+        e.jsx(y,{}),
+        e.jsxs("div",{className:"relative mt-2 mb-6 p-3 rounded-3xl bg-gradient-gold shadow-gold max-w-[280px] sm:max-w-[340px] w-full mx-auto",style:{background:"linear-gradient(135deg, #d4af37 0%, #FFF8EE 50%, #aa7c11 100%)"},children:[
+          e.jsx("div",{className:"rounded-2xl overflow-hidden border-2 border-[#5C0F14]/20 bg-[#FCF8F2] shadow-elegant",children:
+            e.jsx("img",{src:fe,alt:"Parents Blessings",className:"w-full h-auto object-cover"})
+          })
+        ]}),
+        e.jsxs("div",{className:"bg-[#FCF8F2]/95 border-2 border-gold-soft p-6 rounded-2xl shadow-elegant max-w-xl w-full space-y-2",children:[
+          e.jsx("h3",{className:"font-royal-title text-lg sm:text-xl text-[#5C0F14] font-bold",children:"Smt. K. Sudhamani & Late Dr. S.E. Mahadevappa"}),
+          e.jsx("p",{className:"font-kannada text-base sm:text-lg text-rose-deep font-bold",children:"ಶ್ರೀಮತಿ ಕೆ. ಸುಧಾಮಣಿ ಹಾಗೂ ದಿವಂಗತ ಡಾ. ಎಸ್.ಇ. ಮಹದೇವಪ್ಪ"}),
+          e.jsx("div",{className:"w-16 h-px bg-gold-soft mx-auto my-2"}),
+          e.jsx("p",{className:"font-royal-body italic text-xs sm:text-sm text-foreground/85 leading-relaxed",children:"\"May the eternal love, values, and divine blessings of our beloved parents forever guide and bless this sacred union.\""}),
+          e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-rose-deep/90 font-medium leading-relaxed",children:"\"ತಂದೆ-ತಾಯಿಯವರ ಪ್ರೀತಿ, ಸಂಸ್ಕಾರ ಹಾಗೂ ಆಶೀರ್ವಾದಗಳು ನವಜೋಡಿಯ ಜೀವನ ಪಯಣದಲ್ಲಿ ಸದಾ ದಾರಿದೀಪವಾಗಿರಲಿ.\""})
+        ]})
+      ]})
+    ]}),
+
+    // 3. SAVE THE DATE
     e.jsxs("section",{className:"relative py-20 px-6 bg-cream border-y border-gold-soft/30 z-10",children:[
       e.jsx("img",{src:k,alt:"",className:"absolute inset-0 w-full h-full object-cover opacity-15 pointer-events-none"}),
       e.jsxs("div",{className:"relative max-w-3xl mx-auto text-center z-10",children:[
         e.jsx("h2",{className:"font-royal-sub text-lg sm:text-xl text-rose-deep tracking-[0.2em] mb-1 font-bold",children:"SAVE THE DATE"}),
-        e.jsx("p",{className:"font-kannada text-sm sm:text-base text-rose-deep/90 font-medium",children:"ಎರಡು ಹೃದಯಗಳು, ಒಂದೇ ಆತ್ಮ • Scratch below to reveal our wedding date"}),
+        e.jsx("p",{className:"font-royal-body text-sm sm:text-base text-rose-deep/90 font-medium",children:"Scratch below to reveal our wedding date"}),
+        e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-rose-deep/85 font-medium mt-0.5",children:"ವಿವಾಹದ ದಿನಾಂಕವನ್ನು ನೋಡಲು ಕೆಳಗೆ ಸ್ಕ್ರ್ಯಾಚ್ ಮಾಡಿ"}),
         e.jsx(y,{}),
         e.jsx("div",{className:"mb-10 mt-8",children:e.jsx(_,{revealed:t,onRevealed:()=>s(!0)})}),
         e.jsx("div",{className:`transition-all duration-1000 ${t?"opacity-100 translate-y-0":"opacity-0 translate-y-8 pointer-events-none h-0 overflow-hidden"}`,"aria-hidden":!t,children:e.jsx(J,{})})
       ]})
     ]}),
 
-    // 3. EVENTS SCHEDULE (Event Names in English, Event Data in Kannada)
+    // 4. EVENTS SCHEDULE (3 Events: Haldi, Reception, Wedding — First English, Then Kannada)
     e.jsx("section",{className:"relative py-20 px-4 sm:px-6 bg-[#FCF8F2] z-10",children:
       e.jsxs("div",{className:"max-w-4xl mx-auto",children:[
         e.jsxs("div",{className:"text-center mb-16",children:[
           e.jsx("h2",{className:"font-royal-title text-3xl sm:text-4xl text-rose-deep font-bold tracking-wide",children:"EVENTS SCHEDULE"}),
+          e.jsx("p",{className:"font-kannada text-lg sm:text-xl text-[#5C0F14] font-bold mt-1",children:"ಶುಭ ಸಮಾರಂಭಗಳ ವಿವರ"}),
           e.jsx("p",{className:"font-royal-sub text-xs tracking-[0.22em] text-rose-deep/80 mt-1 font-semibold",children:"CELEBRATE WITH US"}),
           e.jsx(y,{}),
-          e.jsx("p",{className:"font-kannada text-sm sm:text-base text-foreground/85 mt-1 font-semibold",children:"10-11-2026, ಮಂಗಳವಾರ & 11-11-2026, ಬುಧವಾರ"})
+          e.jsx("p",{className:"font-royal-body text-sm sm:text-base text-foreground/85 mt-1 font-semibold",children:"09-11-2026 • 11-11-2026 • 12-11-2026"})
         ]}),
         e.jsxs("div",{className:"space-y-16",children:[
-          // Event 1: WEDDING RECEPTION
-          e.jsxs("div",{className:"relative rounded-3xl overflow-hidden border border-gold-soft bg-white p-6 sm:p-12 shadow-elegant hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between min-h-[520px] isolate",children:[
+          // Event 1: HALDI CEREMONY (09-11-2026, Monday, 7:00 PM)
+          e.jsxs("div",{className:"relative rounded-3xl overflow-hidden border border-gold-soft bg-white p-6 sm:p-12 shadow-elegant hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between min-h-[550px] isolate",children:[
+            e.jsx("img",{src:re,alt:"",className:"absolute inset-0 w-full h-full object-cover z-0 pointer-events-none scale-[1.06] origin-center"}),
+            e.jsx("div",{className:"absolute inset-0 pointer-events-none overflow-hidden mix-blend-color-burn z-10",children:Array.from({length:15}).map((c,l)=>e.jsx("div",{className:"absolute w-2 h-2 sm:w-3 sm:h-3 rounded-full bg-amber-400 opacity-60 animate-turmeric",style:{left:`${l*37%100}%`,top:`${10+l*23%80}%`,animationDelay:`${l*7%30/10}s`,animationDuration:`${2.5+l*11%30/10}s`}},l))}),
+            e.jsxs("div",{className:"relative top-4 z-10 text-center flex flex-col items-center w-full mx-auto bg-white/75 backdrop-blur-md border border-white/60 p-5 sm:p-6 rounded-3xl shadow-elegant mt-12 sm:mt-16",children:[
+              e.jsx("img",{src:v,alt:"HM Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
+              e.jsx("p",{className:"font-royal-body italic text-amber-800 text-sm font-semibold tracking-wide",children:"#HaldiCeremony"}),
+              e.jsx("h2",{className:"font-royal-title text-2xl sm:text-3xl tracking-wide font-bold text-amber-900 leading-tight mt-1",children:"💛 HALDI CEREMONY 💛"}),
+              e.jsx("p",{className:"font-kannada text-lg sm:text-xl font-bold text-amber-900 mt-1",children:"💛 ಅರಿಶಿನ ಶಾಸ್ತ್ರ ಸಮಾರಂಭ 💛"}),
+              e.jsx("div",{className:"w-20 h-px bg-gold-soft/70 my-3.5"}),
+              // English Date & Time First, Kannada Second
+              e.jsxs("div",{className:"inline-flex flex-col items-center justify-center bg-amber-500/15 border border-amber-600/35 px-6 py-3 rounded-2xl text-amber-950 shadow-soft space-y-1",style:{color:"#5C0F14"},children:[
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-bold",children:"Date: 09-11-2026, Monday | Timings: 7:00 PM"}),
+                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ದಿನಾಂಕ: 09-11-2026, ಸೋಮವಾರ | ಸಮಯ: ಸಂಜೆ 7:00 ಗಂಟೆಗೆ"})
+              ]}),
+              // English Venue First, Kannada Venue Second
+              e.jsxs("div",{className:"mt-4 space-y-1.5 text-center",children:[
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-semibold text-[#5C0F14]",children:"Haldi Address: # 427, Sudha Mahal, 17th Cross, 10th Main, Alanahalli Layout, Lalitha Mahal Nagara, Mysuru."}),
+                e.jsx("p",{className:"font-kannada text-xs sm:text-sm font-bold text-foreground/90 leading-relaxed",children:"ಸ್ಥಳದ ವಿಳಾಸ: ನಂ. 427, ಸುಧಾ ಮಹಲ್, 17ನೇ ಕ್ರಾಸ್, 10ನೇ ಮೇನ್, ಅಲನಹಳ್ಳಿ ಲೇಔಟ್, ಲಲಿತ ಮಹಲ್ ನಗರ, ಮೈಸೂರು."})
+              ]})
+            ]}),
+            e.jsx("div",{className:"relative z-10 w-full max-w-[220px] sm:max-w-[260px] mx-auto mt-8 flex justify-center items-end self-end",children:
+              e.jsx("img",{src:"/img/haldi-groom.png",alt:"Haldi Ceremony",className:"w-full h-auto object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500"})
+            })
+          ]}),
+
+          // Event 2: WEDDING RECEPTION (12-11-2026, Thursday, 12:00 PM onwards)
+          e.jsxs("div",{className:"relative rounded-3xl overflow-hidden border border-gold-soft bg-white p-6 sm:p-12 shadow-elegant hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between min-h-[550px] isolate",children:[
             e.jsx("img",{src:"/img/reception-bg.png",alt:"",className:"absolute inset-0 w-full h-full object-cover z-0 pointer-events-none scale-[1.06] origin-center filter brightness-95"}),
             e.jsx("div",{className:"absolute inset-0 pointer-events-none overflow-hidden z-10",children:Array.from({length:6}).map((c,l)=>e.jsx("div",{className:"absolute animate-float-petal opacity-75",style:{left:`${15+l*27%75}%`,animationDuration:`${10+l*4%7}s`,animationDelay:`${l*5%4}s`},children:e.jsx("span",{className:"text-xl sm:text-2xl opacity-70",children:"✨"})},l))}),
             e.jsxs("div",{className:"relative z-10 text-center flex flex-col items-center w-full mx-auto bg-white/75 backdrop-blur-md border border-white/60 p-5 sm:p-6 rounded-3xl shadow-elegant mt-12 sm:mt-16",children:[
               e.jsx("img",{src:v,alt:"HM Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
               e.jsx("p",{className:"font-royal-body italic text-[#5C0F14] text-sm font-semibold tracking-wide",style:{color:"#5C0F14"},children:"#WeddingReception"}),
               e.jsx("h2",{className:"font-royal-title text-2xl sm:text-3xl tracking-wide font-bold text-[#5C0F14] leading-tight mt-1",style:{color:"#5C0F14"},children:"💐 WEDDING RECEPTION 💐"}),
+              e.jsx("p",{className:"font-kannada text-lg sm:text-xl font-bold text-[#5C0F14] mt-1",children:"💐 ವಿವಾಹ ಆರತಕ್ಷತೆ 💐"}),
               e.jsx("div",{className:"w-20 h-px bg-gold-soft/70 my-3.5"}),
-              e.jsxs("div",{className:"inline-flex flex-col items-center justify-center bg-amber-500/15 border border-amber-600/35 px-6 py-2.5 rounded-2xl text-amber-950 shadow-soft space-y-1",style:{color:"#5C0F14"},children:[
-                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ದಿನಾಂಕ: 10-11-2026, ಮಂಗಳವಾರ"}),
-                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ಸಮಯ: 7:00PM ಗಂಟೆಯಿಂದ"})
+              // English Date & Time First, Kannada Second
+              e.jsxs("div",{className:"inline-flex flex-col items-center justify-center bg-amber-500/15 border border-amber-600/35 px-6 py-3 rounded-2xl text-amber-950 shadow-soft space-y-1",style:{color:"#5C0F14"},children:[
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-bold",children:"Date: 12-11-2026, Thursday | Timings: 12:00 PM onwards"}),
+                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ದಿನಾಂಕ: 12-11-2026, ಗುರುವಾರ | ಸಮಯ: ಮಧ್ಯಾಹ್ನ 12:00 ಗಂಟೆಯಿಂದ"})
               ]}),
-              e.jsxs("div",{className:"mt-4 space-y-1 text-center",children:[
-                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold text-[#5C0F14]",children:"ಶ್ರೀ ತಿಮ್ಮಮ್ಮ ದಾಸೇಗೌಡ ಕಲ್ಯಾಣ ಮಂಟಪ,"}),
-                e.jsx("p",{className:"font-kannada text-xs sm:text-sm font-medium text-foreground/90 leading-relaxed",children:"ಬಿ.ಎಂ. ರಸ್ತೆ, ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ"})
+              // English Venue First, Kannada Venue Second
+              e.jsxs("div",{className:"mt-4 space-y-1.5 text-center",children:[
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-bold text-[#5C0F14]",children:"Reception Venue: Lalitha Mahal Palace, Mysuru."}),
+                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold text-foreground/90 leading-relaxed",children:"ಸ್ಥಳ: ಲಲಿತ ಮಹಲ್ ಅರಮನೆ, ಮೈಸೂರು."})
               ]})
             ]}),
-            e.jsx("div",{className:"relative z-10 w-full max-w-[200px] sm:max-w-[240px] mx-auto mt-8 flex justify-center items-end self-end",children:
+            e.jsx("div",{className:"relative z-10 w-full max-w-[220px] sm:max-w-[260px] mx-auto mt-8 flex justify-center items-end self-end",children:
               e.jsx("img",{src:ee,alt:"Wedding Reception Couple",className:"w-full h-auto object-contain drop-shadow-xl group-hover:scale-105 transition-transform duration-500"})
             })
           ]}),
 
-          // Event 2: WEDDING CEREMONY
-          e.jsxs("div",{className:"relative rounded-3xl overflow-hidden border border-gold-soft bg-white text-cream p-6 sm:p-12 shadow-elegant hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between min-h-[540px] isolate",children:[
+          // Event 3: WEDDING CEREMONY (11-11-2026, Wednesday, 9:20 AM to 10:40 AM, Dhanur Lagna)
+          e.jsxs("div",{className:"relative rounded-3xl overflow-hidden border border-gold-soft bg-white text-cream p-6 sm:p-12 shadow-elegant hover:shadow-2xl transition-all duration-500 group flex flex-col justify-between min-h-[560px] isolate",children:[
             e.jsx("img",{src:ce,alt:"",className:"absolute inset-0 w-full h-full object-cover z-0 pointer-events-none scale-[1.06] origin-center"}),
             e.jsx("div",{className:"absolute inset-0 pointer-events-none overflow-hidden z-10",children:Array.from({length:6}).map((c,l)=>e.jsx("div",{className:"absolute animate-float-petal opacity-75",style:{left:`${10+l*29%80}%`,animationDuration:`${12+l*3%8}s`,animationDelay:`${l*7%5}s`},children:e.jsx("span",{className:"text-xl sm:text-2xl opacity-70",children:"🌸"})},l))}),
             e.jsxs("div",{className:"relative z-10 text-center flex flex-col items-center w-full mx-auto bg-white/75 backdrop-blur-md border border-white/60 p-5 sm:p-6 rounded-3xl shadow-elegant mt-12 sm:mt-16",children:[
               e.jsx("img",{src:v,alt:"HM Monogram",className:"w-14 h-14 sm:w-16 sm:h-16 rounded-full object-cover mx-auto mb-2 shadow-sm"}),
               e.jsx("p",{className:"font-royal-body italic text-[#5C0F14] text-sm font-semibold tracking-wide",style:{color:"#5C0F14"},children:"#WeddingCeremony"}),
               e.jsx("h2",{className:"font-royal-title text-2xl sm:text-3xl tracking-wide font-bold text-[#5C0F14] leading-tight mt-1",style:{color:"#5C0F14"},children:"🙏 WEDDING CEREMONY 🙏"}),
+              e.jsx("p",{className:"font-kannada text-lg sm:text-xl font-bold text-[#5C0F14] mt-1",children:"🙏 ಶುಭ ವಿವಾಹ ಮಹೋತ್ಸವ 🙏"}),
               e.jsx("div",{className:"w-20 h-px bg-gold-soft/70 my-3.5"}),
-              e.jsxs("div",{className:"inline-flex flex-col items-center justify-center bg-amber-500/15 border border-amber-600/35 px-6 py-2.5 rounded-2xl text-amber-950 shadow-soft space-y-1",style:{color:"#5C0F14"},children:[
-                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ದಿನಾಂಕ: 11-11-2026, ಬುಧವಾರ"}),
-                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ಸಮಯ: ಬೆಳಿಗ್ಗೆ 9:20 ರಿಂದ 10:40 ರವರೆಗೆ"}),
+              // English Date, Time & Lagna First, Kannada Second
+              e.jsxs("div",{className:"inline-flex flex-col items-center justify-center bg-amber-500/15 border border-amber-600/35 px-6 py-3 rounded-2xl text-amber-950 shadow-soft space-y-1",style:{color:"#5C0F14"},children:[
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-bold",children:"Date: 11-11-2026, Wednesday | Timings: 9:20 AM to 10:40 AM"}),
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-bold text-amber-900",children:"Lagna: Dhanur Lagna"}),
+                e.jsx("div",{className:"w-16 h-px bg-gold-soft/60 my-1"}),
+                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold",children:"ದಿನಾಂಕ: 11-11-2026, ಬುಧವಾರ | ಸಮಯ: ಬೆಳಿಗ್ಗೆ 9:20 ರಿಂದ 10:40 ರವರೆಗೆ"}),
                 e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold text-amber-900",children:"ಲಗ್ನ: ಧನುರ್ ಲಗ್ನ"})
               ]}),
-              e.jsxs("div",{className:"mt-4 space-y-1 text-center",children:[
-                e.jsx("p",{className:"font-kannada text-xs sm:text-sm font-semibold text-amber-900",children:"ವಿವಾಹದ ಸ್ಥಳ:"}),
-                e.jsx("p",{className:"font-kannada text-sm sm:text-base font-bold text-[#5C0F14]",children:"ಶ್ರೀ ತಿಮ್ಮಮ್ಮ ದಾಸೇಗೌಡ ಕಲ್ಯಾಣ ಮಂಟಪ,"}),
-                e.jsx("p",{className:"font-kannada text-xs sm:text-sm font-medium text-foreground/90 leading-relaxed",children:"ಬಿ.ಎಂ. ರಸ್ತೆ, ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ"})
+              // English Venue First, Kannada Venue Second
+              e.jsxs("div",{className:"mt-4 space-y-1.5 text-center",children:[
+                e.jsx("p",{className:"font-royal-body text-xs sm:text-sm font-bold text-[#5C0F14]",children:"Wedding Venue: Sri Thimmamma Dasegowda Kalyana Mantapa, B.M. Road, Kengal, Channapatna Taluk, Bengaluru Dakshina District."}),
+                e.jsx("p",{className:"font-kannada text-xs sm:text-sm font-bold text-foreground/90 leading-relaxed",children:"ವಿವಾಹದ ಸ್ಥಳ: ಶ್ರೀ ತಿಮ್ಮಮ್ಮ ದಾಸೇಗೌಡ ಕಲ್ಯಾಣ ಮಂಟಪ, ಬಿ.ಎಂ. ರಸ್ತೆ, ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ."})
               ]})
             ]}),
             e.jsx("div",{className:"relative z-10 w-full max-w-[200px] sm:max-w-[240px] mx-auto mt-8 flex justify-center items-end self-end",children:
@@ -236,7 +307,7 @@ const de=()=>{
       ]})
     }),
 
-    // 4. WISHES & POETIC QUOTE SECTION (Heading in English, Data in Kannada)
+    // 5. WISHES & POETIC QUOTE SECTION (First English, Then Kannada)
     e.jsxs("section",{className:"relative py-20 px-4 sm:px-6 bg-cream text-center z-10 border-t border-gold-soft/30",children:[
       e.jsx("img",{src:k,alt:"",className:"absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"}),
       e.jsxs("div",{className:"relative max-w-2xl mx-auto z-10",children:[
@@ -251,8 +322,12 @@ const de=()=>{
         // Divider
         e.jsx("div",{className:"w-16 h-px bg-gold-soft/60 mx-auto my-7"}),
 
-        // Poetic Quote Card in Kannada
-        e.jsx("div",{className:"bg-[#FCF8F2]/95 border-2 border-gold-soft p-6 rounded-2xl shadow-elegant",children:
+        // Poetic Quote Card: First English, Then Kannada
+        e.jsxs("div",{className:"bg-[#FCF8F2]/95 border-2 border-gold-soft p-6 rounded-2xl shadow-elegant space-y-3",children:[
+          e.jsx("p",{className:"font-royal-title text-base sm:text-lg text-[#5C0F14] font-bold leading-relaxed",children:
+            "💜 Two hearts, one soul, one beautiful journey forever. 💜"
+          }),
+          e.jsx("div",{className:"w-14 h-px bg-gold-soft mx-auto"}),
           e.jsxs("p",{className:"font-kannada text-base sm:text-lg text-[#5C0F14] font-bold leading-relaxed",children:[
             "💜 ಎರಡು ಹೃದಯಗಳು, ಒಂದೇ ಆತ್ಮ,",
             e.jsx("br",{}),
@@ -260,46 +335,70 @@ const de=()=>{
             e.jsx("br",{}),
             "ಎಂದೆಂದಿಗೂ ಸುಂದರವಾದ ಪಯಣ. 💜"
           ]})
-        })
+        ]})
       ]})
     ]}),
 
-    // 5. VENUE & MAP (Heading in English, Address Data in Kannada)
+    // 6. VENUES & MAPS (First English, Then Kannada)
     e.jsxs("section",{className:"relative py-20 px-6 bg-[#FAF6F0] z-10 border-t border-gold-soft/30",children:[
       e.jsx("div",{className:"absolute inset-0 opacity-[0.08] bg-cover bg-center pointer-events-none",style:{backgroundImage:`url(${k})`}}),
-      e.jsxs("div",{className:"relative max-w-4xl mx-auto text-center z-10",children:[
-        e.jsx("p",{className:"font-royal-sub text-xs text-rose-deep/80 tracking-[0.22em] uppercase font-semibold",children:"WEDDING VENUE"}),
-        e.jsx("h2",{className:"font-royal-title text-2xl sm:text-4xl text-rose-deep mt-2 font-semibold",children:"Sri Thimmamma Dasegowda Kalyana Mantapa"}),
-        e.jsx(y,{}),
-        e.jsxs("div",{className:"max-w-xl mx-auto leading-relaxed space-y-1.5",children:[
-          e.jsx("p",{className:"font-kannada font-bold text-rose-deep text-lg sm:text-xl",children:"📍 ಶ್ರೀ ತಿಮ್ಮಮ್ಮ ದಾಸೇಗೌಡ ಕಲ್ಯಾಣ ಮಂಟಪ,"}),
-          e.jsx("p",{className:"font-kannada text-sm sm:text-base text-foreground/90 font-medium leading-relaxed",children:"ಬಿ.ಎಂ. ರಸ್ತೆ, ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ"})
+      e.jsxs("div",{className:"relative max-w-4xl mx-auto text-center z-10 space-y-16",children:[
+        // Wedding Venue Map
+        e.jsxs("div",{children:[
+          e.jsx("p",{className:"font-royal-sub text-xs text-rose-deep/80 tracking-[0.22em] uppercase font-semibold",children:"WEDDING VENUE • ವಿವಾಹದ ಸ್ಥಳ"}),
+          e.jsx("h2",{className:"font-royal-title text-2xl sm:text-4xl text-rose-deep mt-2 font-semibold",children:"Sri Thimmamma Dasegowda Kalyana Mantapa"}),
+          e.jsx(y,{}),
+          e.jsxs("div",{className:"max-w-xl mx-auto leading-relaxed space-y-1.5",children:[
+            e.jsx("p",{className:"font-royal-body font-bold text-rose-deep text-sm sm:text-base",children:"📍 Sri Thimmamma Dasegowda Kalyana Mantapa, B.M. Road, Kengal, Channapatna Taluk, Bengaluru Dakshina District"}),
+            e.jsx("p",{className:"font-kannada font-bold text-foreground/90 text-sm sm:text-base leading-relaxed",children:"📍 ಶ್ರೀ ತಿಮ್ಮಮ್ಮ ದಾಸೇಗೌಡ ಕಲ್ಯಾಣ ಮಂಟಪ, ಬಿ.ಎಂ. ರಸ್ತೆ, ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ"})
+          ]}),
+          e.jsx("div",{className:"mt-8 rounded-3xl overflow-hidden border border-gold-soft shadow-elegant max-w-2xl mx-auto",children:
+            e.jsx("iframe",{title:"Sri Thimmamma Dasegowda Kalyana Mantapa map",src:"https://www.google.com/maps?q=Sri+Thimmamma+Dasegowda+Kalyana+Mantapa+B.M.+Road+Kengal+Channapatna&output=embed",className:"w-full h-[300px] sm:h-[340px]",loading:"lazy"})
+          }),
+          e.jsx("a",{href:"https://www.google.com/maps/search/?api=1&query=Sri+Thimmamma+Dasegowda+Kalyana+Mantapa+B.M.+Road+Kengal+Channapatna",target:"_blank",rel:"noreferrer",className:"inline-block mt-6",children:
+            e.jsxs(U,{className:"gradient-gold text-white border-0 hover:opacity-90 rounded-full px-8 shadow-gold font-royal-body text-xs font-semibold tracking-wider",children:[
+              e.jsx(H,{className:"mr-2 h-4 w-4"}),
+              "Get Directions (Wedding Venue)"
+            ]})
+          })
         ]}),
-        e.jsx("div",{className:"mt-10 rounded-3xl overflow-hidden border border-gold-soft shadow-elegant max-w-2xl mx-auto",children:
-          e.jsx("iframe",{title:"Sri Thimmamma Dasegowda Kalyana Mantapa map",src:"https://www.google.com/maps?q=Sri+Thimmamma+Dasegowda+Kalyana+Mantapa+B.M.+Road+Kengal+Channapatna&output=embed",className:"w-full h-[320px] sm:h-[380px]",loading:"lazy"})
-        }),
-        e.jsx("a",{href:"https://www.google.com/maps/search/?api=1&query=Sri+Thimmamma+Dasegowda+Kalyana+Mantapa+B.M.+Road+Kengal+Channapatna",target:"_blank",rel:"noreferrer",className:"inline-block mt-8",children:
-          e.jsxs(U,{className:"gradient-gold text-white border-0 hover:opacity-90 rounded-full px-8 shadow-gold font-royal-body text-xs font-semibold tracking-wider",children:[
-            e.jsx(H,{className:"mr-2 h-4 w-4"}),
-            "Get Directions"
-          ]})
-        })
+
+        // Reception Venue Map
+        e.jsxs("div",{children:[
+          e.jsx("p",{className:"font-royal-sub text-xs text-rose-deep/80 tracking-[0.22em] uppercase font-semibold",children:"RECEPTION VENUE • ಆರತಕ್ಷತೆ ಸ್ಥಳ"}),
+          e.jsx("h2",{className:"font-royal-title text-2xl sm:text-4xl text-rose-deep mt-2 font-semibold",children:"Lalitha Mahal Palace, Mysuru"}),
+          e.jsx(y,{}),
+          e.jsxs("div",{className:"max-w-xl mx-auto leading-relaxed space-y-1.5",children:[
+            e.jsx("p",{className:"font-royal-body font-bold text-rose-deep text-sm sm:text-base",children:"📍 Lalitha Mahal Palace, Mysuru (12-11-2026, Thursday, 12:00 PM onwards)"}),
+            e.jsx("p",{className:"font-kannada font-bold text-foreground/90 text-sm sm:text-base leading-relaxed",children:"📍 ಲಲಿತ ಮಹಲ್ ಅರಮನೆ, ಮೈಸೂರು (12-11-2026, ಗುರುವಾರ, ಮಧ್ಯಾಹ್ನ 12:00 ಗಂಟೆಯಿಂದ)"})
+          ]}),
+          e.jsx("div",{className:"mt-8 rounded-3xl overflow-hidden border border-gold-soft shadow-elegant max-w-2xl mx-auto",children:
+            e.jsx("iframe",{title:"Lalitha Mahal Palace Mysuru map",src:"https://www.google.com/maps?q=Lalitha+Mahal+Palace+Mysuru&output=embed",className:"w-full h-[300px] sm:h-[340px]",loading:"lazy"})
+          }),
+          e.jsx("a",{href:"https://www.google.com/maps/search/?api=1&query=Lalitha+Mahal+Palace+Mysuru",target:"_blank",rel:"noreferrer",className:"inline-block mt-6",children:
+            e.jsxs(U,{className:"gradient-gold text-white border-0 hover:opacity-90 rounded-full px-8 shadow-gold font-royal-body text-xs font-semibold tracking-wider",children:[
+              e.jsx(H,{className:"mr-2 h-4 w-4"}),
+              "Get Directions (Reception Venue)"
+            ]})
+          })
+        ]})
       ]})
     ]}),
 
-    // 6. FOOTER
+    // 7. FOOTER
     e.jsxs("footer",{className:"relative bg-gradient-to-b from-[#3A050B] to-[#5C0F14] text-cream py-16 px-6 text-center z-10 border-t-2 border-gold-soft/40",children:[
       e.jsx("div",{className:"absolute inset-0 bg-black/10 pointer-events-none"}),
       e.jsx("p",{className:"font-royal-sub text-xs tracking-[0.3em] text-amber-200 font-semibold",style:{color:"#FDE68A"},children:"WITH LOVE"}),
-      e.jsx("h3",{className:"font-royal-script text-4xl sm:text-5xl text-amber-200 mt-2 font-normal",style:{color:"#FDE68A"},children:"Harshitha & Manohar"}),
+      e.jsx("h3",{className:"font-royal-script text-4xl sm:text-5xl text-amber-200 mt-2 font-normal",style:{color:"#FDE68A"},children:"Manohar & Harshitha"}),
+      e.jsx("p",{className:"font-kannada text-base sm:text-lg text-amber-100 mt-1 font-semibold",style:{color:"#FEF3C7"},children:"ಚಿ.ರಾ. ಮನೋಹರ್ ಎಂ. & ಚಿ. ಸೌ. ಹರ್ಷಿತಾ ಎಂ.ಕೆ."}),
       e.jsxs("div",{className:"my-5 flex items-center justify-center gap-3",children:[
         e.jsx("span",{className:"h-px w-12 bg-gold-soft/50"}),
         e.jsx("span",{className:"text-2xl font-emoji",children:"💜"}),
         e.jsx("span",{className:"h-px w-12 bg-gold-soft/50"})
       ]}),
-      e.jsx("p",{className:"font-kannada text-sm sm:text-base text-amber-100 font-medium",style:{color:"#FFF8EE"},children:"10-11-2026, ಮಂಗಳವಾರ & 11-11-2026, ಬುಧವಾರ"}),
-      e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-amber-200 mt-1.5 font-normal",style:{color:"#FDE68A"},children:"ಶ್ರೀ ತಿಮ್ಮಮ್ಮ ದಾಸೇಗೌಡ ಕಲ್ಯಾಣ ಮಂಟಪ, ಬಿ.ಎಂ. ರಸ್ತೆ, ಕೆಂಗಲ್, ಚನ್ನಪಟ್ಟಣ ತಾಲ್ಲೂಕು, ಬೆಂಗಳೂರು ದಕ್ಷಿಣ ಜಿಲ್ಲೆ"}),
-      e.jsx("p",{className:"mt-3.5 font-royal-sub text-xs tracking-[0.2em] text-amber-300 font-bold",style:{color:"#FDE68A"},children:"#HarshithaWedsManohar"})
+      e.jsx("p",{className:"font-royal-body text-xs sm:text-sm text-amber-100 font-medium",style:{color:"#FFF8EE"},children:"Haldi: 09-11-2026 • Wedding: 11-11-2026 • Reception: 12-11-2026"}),
+      e.jsx("p",{className:"font-kannada text-xs sm:text-sm text-amber-200 mt-1.5 font-normal",style:{color:"#FDE68A"},children:"ಅರಿಶಿನ ಶಾಸ್ತ್ರ: 09-11-2026 • ವಿವಾಹ: 11-11-2026 • ಆರತಕ್ಷತೆ: 12-11-2026"}),
+      e.jsx("p",{className:"mt-3.5 font-royal-sub text-xs tracking-[0.2em] text-amber-300 font-bold",style:{color:"#FDE68A"},children:"#ManoharWedsHarshitha"})
     ]})
   ]});
 };
