@@ -64,7 +64,7 @@ function _({revealed:t,onRevealed:s}){
   ]})
 }
 function U({className:t="",children:s,...a}){return e.jsx("span",{className:`directions-button ${t}`,...a,children:s})}
-const Y="/img/maroonenvelop-DVcZBctQ.png",v="/img/hm-logo.png",A="/img/ganesh-idol-TubyYjSJ.png",Z="/img/g-envelope-bg-B_YE_ECq.png",
+const Y="/img/maroonenvelop-DVcZBctQ.png",v="/img/MH-lgo.png",A="/img/ganesh-idol-TubyYjSJ.png",Z="/img/g-envelope-bg-B_YE_ECq.png",
 q=({onOpen:t,opening:s})=>e.jsxs("div",{className:"min-h-screen w-full flex flex-col items-center justify-center relative bg-[#FCF8F2] px-6 overflow-hidden",children:[
   e.jsx("img",{src:Z,alt:"",className:"absolute inset-0 w-full h-full object-cover pointer-events-none"}),
   e.jsx("div",{className:"absolute inset-0 bg-gradient-to-b from-cream/20 via-transparent to-cream/40 pointer-events-none"}),
